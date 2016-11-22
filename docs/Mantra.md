@@ -25,7 +25,7 @@ JavaScript就像是一个充满选择的土地。 我们对每个问题有不止
 Mantra依赖一套将持续很长时间的核心原则，我们允许其他人根据需要进行更改。
 #### 1.1 Mantra里有什么？
 - 它有一个现代的，基于React的**UI组件**层。
-- 它有一个在你的应用程序中定义业务逻辑的地方， 我们称之为**动作(action)**。
+- 它有一个在你的应用程序中定义业务逻辑的地方， 我们称之为 **动作(action)**。
 - Mantra本身不提供状态管理，但它允许你使用各种各样的状态管理器，包括Meteor / Tracker，Redux，Rx.js Observable，Promise和几乎任何其他的状态管理器。
 - 它有一种通过组合容器(containers)将状态(states)和动作(action)集成到UI组件中的方法。
 - 它允许你依赖注入。
@@ -94,6 +94,7 @@ export default PostList;
 - 与远程数据源的交互
 一个动作是一个简单的函数，它的第一个参数是整个应用的Context，其他参数通常来自函数调用时。
 >注意: 在动作中，你所做的一切都应是基于应用的Context传递给动作的其他参数。你不能引用任何ES2015的modules 除了库以外。还应避免在动作中使用全局变量。
+
 这是一个动作:
 ```js
 export default{
@@ -111,11 +112,11 @@ export default{
       }
     });
     FlowRouter.go(`/post/${id}`);
-    
+
     clearErrors({LocalState}){
         return     LocalState.set('SAVING_ERROR', null);
     }
-    
+
 };
 ```
 #### 2.5 状态(state)管理
@@ -193,7 +194,7 @@ export default composeAll(
 - Rest Clients
 - DDP Clients
 这是一个简单的应用Context的例子:
-```js 
+```js
 import * as Collections from '/lib/collections';
 import {Meteor} from 'meteor/meteor';
 import {FlowRouter} from 'meteor/kadira:flow-router';
@@ -341,7 +342,7 @@ Mantra是100％模块化的，应用程序中应至少有一个模块， 我们�
 
 ##### 2.12.8 子模块
 
-在一个模块中，**不能**包含子模块。这是为防止不必要的复杂性而做出的决定。 否则，编写多层嵌套模块是会很难管理。
+在一个模块中，**不能** 包含子模块。这是为防止不必要的复杂性而做出的决定。 否则，编写多层嵌套模块是会很难管理。
 
 #### 2.13 单一入口
 
