@@ -1,4 +1,7 @@
-#Mantra
+#Mantra官方文档(翻译)
+
+**转载请注明作者及原文链接**
+
 *工作草案-版本0.2.0*
 ##简介
 这是一个Mantra草案规范，一个由[Kadira](https://kadira.io/)创建的Meteor的应用程序架构。 它帮助开发人员构建可维护的，面向未来的Meteor应用程序。
@@ -31,6 +34,7 @@ Mantra依赖一套将持续很长时间的核心原则，我们允许其他人�
 - 它允许你依赖注入。
 - 它帮助你单元测试UI，动作和集成（容器）。
 - 它对目录布局，文件命名和其他内容都有一些标准。
+
 #### 1.2 Mantra不是什么？
 - 它不是一个应用程序平台，应用程序平台专注于应用打包，传输，部署等任务。Mantra使用Meteor作为应用程序平台。
 - 它不是一个样板，即使我们有着同样的目录结构。
@@ -519,6 +523,7 @@ export default function (injectDeps) {
 - 加载路由
 - 定义action
 - 在加载模块时运行配置
+
 这是一个典型的模块定义文件:
 ```js    
 import methodStubs from './configs/method_stubs';
