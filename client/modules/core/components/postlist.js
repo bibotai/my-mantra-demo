@@ -8,7 +8,7 @@ const PostList = ({posts}) => (
                 <li key={post._id}>
                     <a href={`/post/${post._id}`}>{post.title}</a>
                 </li>
-            ));}
+            ))}
         </ul>
 
     </div>
