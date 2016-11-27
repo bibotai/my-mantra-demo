@@ -8,7 +8,6 @@ import PostList from './containers/postlist'
 export default function(injectDeps, {FlowRouter}) {
     //注入部分
     const MainLayoutCtx = injectDeps(MainLayout)
-    console.log('route function');
     //根路由
     FlowRouter.route('/', {
         name: 'posts.list',

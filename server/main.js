@@ -1,5 +1,8 @@
-import { Meteor } from 'meteor/meteor';
 
-Meteor.startup(() => {
-  // code to run on server at startup
-});
+import publications from './publications';
+import addInitialData from './configs/initial_adds.js';
+
+//发布
+publications();
+//加载初始化数据
+addInitialData();
