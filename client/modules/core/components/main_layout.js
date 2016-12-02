@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from './navigation';
 
 const Layout = ({
+    //这是页面的整体布局
     //内容组件作为参数传进来
     content = () => null
 }) => (

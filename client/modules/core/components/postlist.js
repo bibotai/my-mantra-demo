@@ -1,5 +1,5 @@
 import React from 'react';
-
+//post列表
 const PostList = ({posts}) => (
     <div className='postlist'>
         <ul>
