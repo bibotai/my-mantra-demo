@@ -1,7 +1,7 @@
 import React from 'react';
 
 class NewPost extends React.Component {
-    rander() {
+    render() {
         const {error} = this.props;
         return (
             <form className="new-post" onSubmit={this.createPost.bind(this)}>

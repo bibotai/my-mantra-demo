@@ -11,6 +11,18 @@ export const composer = ({
     const error = LocalState.get('SAVING_ERROR');
     onData(null, {error});
 
-    //
+    //当组件卸载时清楚错误
     return clearErrors;
 };
+
+//mapper函数从依赖注入层获取数据
+export const depsMapper=(context,actions)=>({
+  create:actions.posts.create,
+  clearErrors:actions.posts.clearErrors,
+  context:()=>context
+});
+
+export default composeAll(
+  composeWithTracker(composer),
+  useDeps(depsMapper)
+)(NewPost);

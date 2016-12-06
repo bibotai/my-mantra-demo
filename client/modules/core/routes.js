@@ -2,7 +2,9 @@ import React from 'react';
 import {mount} from 'react-mounter';
 
 import MainLayout from './components/main_layout';
-import PostList from './containers/postlist'
+import PostList from './containers/postlist';
+import NewPost from './containers/newpost';
+
 //TODO:其他页面
 //这是包含模块的路由定义的文件。 它有一个默认引出，它是一个函数。
 // 在加载模块时，将使用一个名为injectDeps的函数来调用此默认引出，
@@ -16,6 +18,16 @@ export default function(injectDeps, {FlowRouter}) {
         action() {
             mount(MainLayoutCtx, {
                 content: () => (<PostList/>)
+            })
+        }
+    });
+
+    //newpost
+    FlowRouter.route('/new-post', {
+        name: 'newpost',
+        action() {
+            mount(MainLayoutCtx, {
+                content: () => (<NewPost/>)
             })
         }
     });

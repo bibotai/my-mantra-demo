@@ -7,6 +7,7 @@
 // 你不能引用任何ES2015的modules 除了库以外。还应避免在动作中使用全局变量。
 
 export default {
+  //创建一个新post
     create({
         Meteor,
         LocalState,
@@ -29,6 +30,7 @@ export default {
         FlowRouter.go(`/post/${id}`);
     },
 
+    //清除错误posts
     clearErrors({LocalState}) {
         return LocalState.set('SAVING_ERROR', null);
     }
